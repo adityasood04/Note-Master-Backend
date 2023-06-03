@@ -22,7 +22,7 @@ app.get("/", (req, res) =>{
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(dotenv.config.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     app.listen(PORT, ()=>{
         console.log("Server started on port no. " + PORT);
